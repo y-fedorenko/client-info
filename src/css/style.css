@@ -1,0 +1,106 @@
+@import url("./reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=PT+Sans:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'PT Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #181720;
+  --color-secondary: #eeeef9;
+  --color-green: #4eff4b;
+  --color-red: #ff2600;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  transition: all 0.2s ease-in-out;
+}
+
+main {
+  height: 100%; /* No footer or header makes it 100% */
+}
+
+.center {
+  display: flex;
+  justify-content: center; /* Horizontal */
+  align-items: center; /* Vertical*/
+  height: 100%; /* height inherited from main*/
+}
+
+.container { 
+  width: min(100% - 30px, 1080px);
+  margin-inline: auto;
+}
+
+/* .box:first-of-type{
+  margin-top: calc(30px + 20%); 
+} */
+
+.box {
+background-color: #ececf100; /*Fully transparent*/
+border: 1px solid #7a7a8423;
+border-radius: 6px;
+}
+
+.box + .box {
+  margin-top: 20px;
+}
+
+.box-header {
+  background-color: #7a7a8423; /*Semi-transparent, light grey or dark grey depending on theme*/
+  height: 46px;
+  width: 250px;
+  text-align: center;
+  line-height: 46px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.light-theme {
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+}
+
+.dark-theme {
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 6px;
+  margin-left: 6px;
+}
+
+p:last-child {
+  margin-bottom: 6px; /* so the border doesnt stick to the las line */
+}
+
+.pulsar {
+  height: 12px;
+  width: 12px;
+  background-color: var(--color-green);
+  border-radius: 50%;
+  margin-right: 9px;
+ 
+}
+
+.network {
+  display: flex;
+  justify-content: space-between;
+}
